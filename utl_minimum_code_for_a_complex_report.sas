@@ -79,7 +79,7 @@ proc sql;
       when 1 then "Male     0"
       else        "Female   0"
     end as mnr
-   ,cats(put(count(sex),3.),'(',put(100*count(sex)/(select count(*) from havNrm),5.1),'%)') as val
+   ,cats(put(count(sex),3.),'(',put(100*count(sex)/(select count(*) from havrNK),5.1),'%)') as val
  from
    havRnk
  group
@@ -198,7 +198,7 @@ proc sql;
       when 1 then "Male     0"
       else        "Female   0"
     end as mnr
-   ,cats(put(count(sex),3.),"(",put(100*count(sex)/(select count(*) from havNrm),5.1),"%)") as val
+   ,cats(put(count(sex),3.),"(",put(100*count(sex)/(select count(*) from havrNK),5.1),"%)") as val
  from
    havRnk
  group
